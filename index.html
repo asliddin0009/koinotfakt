@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COSMOS - Koinot Entsiklopediyasi</title>
+    
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Nova+Square&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Background Animation Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Ambient Audio -->
+    <audio id="space-audio" loop>
+        <source src="https://assets.mixkit.co/music/preview/mixkit-space-trip-90.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-brand">
+            <i class="ph-fill ph-planet"></i> COSMOS
+        </div>
+        <ul class="nav-links">
+            <li><a href="#quyosh-tizimi">Quyosh tizimi</a></li>
+            <li><a href="#tubsiz-fazo">Tubsiz Fazo</a></li>
+            <li><a href="#tarix">Kosmik Tarix</a></li>
+        </ul>
+        <div class="nav-controls">
+            <button id="audio-btn" title="Ovozni yoqish"><i class="ph-fill ph-speaker-slash"></i></button>
+            <button id="mobile-menu-btn"><i class="ph ph-list"></i></button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="close-menu"><i class="ph ph-x"></i></div>
+        <ul>
+            <li><a href="#quyosh-tizimi">Quyosh tizimi</a></li>
+            <li><a href="#tubsiz-fazo">Tubsiz Fazo</a></li>
+            <li><a href="#tarix">Kosmik Tarix</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="stellar-title">KOINOT SIRLARI</h1>
+            <p class="hero-subtitle">Biz yashayotgan va aqlimiz ko'tarmaydigan cheksiz olam haqida to'liq va mukammal ensiklopediya.</p>
+            <a href="#quyosh-tizimi" class="btn-glow">
+                <span>Sayyohatga chiqish</span>
+                <i class="ph-bold ph-rocket-launch"></i>
+            </a>
+        </div>
+        <div class="scroll-down">
+            <span>Kashf eting</span>
+            <div class="mouse"><div class="wheel"></div></div>
+        </div>
+    </section>
+
+    <!-- Quyosh Tizimi Section -->
+    <section id="quyosh-tizimi" class="section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>O'Z UYIMIZ: QUYOSH TIZIMI</h2>
+                <div class="line"></div>
+                <p>Bizning Quyoshimiz atrofida aylanuvchi tosh va gazdan iborat ulkan olamlar. Ular bizning eng yaqin kosmik qo'shnilarimizdir.</p>
+            </div>
+
+            <!-- Massive Grid for Planets -->
+            <div class="content-grid">
+                
+                <!-- Sun -->
+                <article class="data-card" data-aos="fade-up">
+                    <div class="card-visual sun-visual"></div>
+                    <div class="card-info">
+                        <span class="category-badge">Yulduz</span>
+                        <h3>Quyosh</h3>
+                        <p class="desc">Quyosh tizimining markazi. U shu qadar ulkanki, tizimdagi barcha massaning 99.8% ni aynan Quyosh tashkil qiladi.</p>
+                        <ul class="data-list">
+                            <li><span><i class="ph ph-thermometer"></i> Harorat:</span> 5,500°C (Yuzasi)</li>
+                            <li><span><i class="ph ph-arrows-out"></i> Diametri:</span> 1.39 mln km</li>
+                            <li><span><i class="ph ph-hourglass"></i> Yoshi:</span> 4.6 mlrd yil</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Mercury -->
+                <article class="data-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-visual mercury-visual"></div>
+                    <div class="card-info">
+                        <span class="category-badge">Tosh Sayyora</span>
+                        <h3>Merkuriy</h3>
+                        <p class="desc">Quyoshga eng yaqin va eng kichik sayyora. Uning atmosferasi deyarli yo'q, kunduzi o'ta issiq, tunda o'ta sovuq.</p>
+                        <ul class="data-list">
+                            <li><span><i class="ph ph-thermometer"></i> Harorat:</span> 430°C dan -180°C gacha</li>
+                            <li><span><i class="ph ph-arrows-out"></i> Diametri:</span> 4,879 km</li>
+                            <li><span><i class="ph ph-calendar"></i> 1 Yil:</span> 88 Yer kuni</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Venus -->
+                <article class="data-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-visual venus-visual"></div>
+                    <div class="card-info">
+                        <span class="category-badge">Tosh Sayyora</span>
+                        <h3>Venera (Zuhro)</h3>
+                        <p class="desc">Quyosh tizimidagi eng issiq sayyora. Uning qalin zaharli atmosferasi issiqlikni qamal qilib oladi (Parnik effekti).</p>
+                        <ul class="data-list">
+                            <li><span><i class="ph ph-thermometer"></i> Harorat:</span> 471°C</li>
+                            <li><span><i class="ph ph-arrows-out"></i> Diametri:</span> 12,104 km</li>
+                            <li><span><i class="ph ph-moon"></i> Yo'ldoshlari:</span> 0</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Earth -->
+                <article class="data-card feature-card" data-aos="fade-up">
+                    <div class="card-visual earth-visual"></div>
+                    <div class="card-info">
+                        <span class="category-badge highlight">Ona Sayyora</span>
+                        <h3>Yer</h3>
+                        <p class="desc">Koinotdagi hayot mavjudligi aniq bo'lgan yagona osmon jismi. Havzasi mo'l-ko'l suyuq suvga va nafas olish uchun kislorodga ega noyob oaza.</p>
+                        <ul class="data-list">
+                            <li><span><i class="ph ph-drop"></i> Suv qoplami:</span> 71%</li>
+                            <li><span><i class="ph ph-arrows-out"></i> Diametri:</span> 12,742 km</li>
+                            <li><span><i class="ph ph-moon"></i> Yo'ldoshlari:</span> 1 ta (Oy)</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Mars -->
+                <article class="data-card" data-aos="fade-up">
+                    <div class="card-visual mars-visual"></div>
+                    <div class="card-info">
+                        <span class="category-badge">Tosh Sayyora</span>
+                        <h3>Mars (Mirrix)</h3>
+                        <p class="desc">Qizil sayyora. Uning yuzasi temir oksidi (zang) bilan qoplangan. Marsda koinotdagi eng ulkan vulqon (Olympus Mons) joylashgan.</p>
+                        <ul class="data-list">
+                            <li><span><i class="ph ph-thermometer"></i> Harorat:</span> O'rtacha -60°C</li>
+                            <li><span><i class="ph ph-arrows-out"></i> Diametri:</span> 6,779 km</li>
+                            <li><span><i class="ph ph-moon"></i> Yo'ldoshlari:</span> 2 ta</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Jupiter -->
+                <article class="data-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-visual jupiter-visual"></div>
+                    <div class="card-info">
+                        <span class="category-badge">Gaz Giganti</span>
+                        <h3>Yupiter (Mushtariy)</h3>
+                        <p class="desc">Eng katta sayyora. Uning ichiga 1300 ta Yer sig'ib ketadi. Uning mashhur "Katta Qizil Dog'i" aslida asrlar davomida aylanuvchi bahaybat bo'rondir.</p>
+                        <ul class="data-list">
+                            <li><span><i class="ph ph-activity"></i> Atmosfera:</span> Vodorod va Geliy</li>
+                            <li><span><i class="ph ph-arrows-out"></i> Diametri:</span> 139,820 km</li>
+                            <li><span><i class="ph ph-moon"></i> Yo'ldoshlari:</span> 95 ta tasdiqlangan</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Saturn -->
+                <article class="data-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-visual saturn-visual"></div>
+                    <div class="card-info">
+                        <span class="category-badge">Gaz Giganti</span>
+                        <h3>Saturn (Zuhal)</h3>
+                        <p class="desc">O'zining ajoyib uzuklari (xalqalari) bilan mashhur. Bu uzuklar milliardlab muz va tosh parchalaridan iborat.</p>
+                        <ul class="data-list">
+                            <li><span><i class="ph ph-circles-three"></i> Uzuklar tizimi:</span> 7 ta asosiy</li>
+                            <li><span><i class="ph ph-arrows-out"></i> Diametri:</span> 116,460 km</li>
+                            <li><span><i class="ph ph-moon"></i> Yo'ldoshlari:</span> 146 ta (eng ko'p)</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Uranus & Neptune & Minor planets -->
+                <article class="data-card" data-aos="fade-up">
+                    <div class="card-visual uranus-visual"></div>
+                    <div class="card-info">
+                        <span class="category-badge">Muz Giganti</span>
+                        <h3>Uran va Neptun</h3>
+                        <p class="desc">Tizimning chekkasidagi sovuq va qorong'u egizak sayyoralar. Ularning atmosferasida metan ko'p bo'lgani uchun ko'k renagda ko'rinadi.</p>
+                        <ul class="data-list">
+                            <li><span><i class="ph ph-thermometer"></i> Harorat:</span> -224°C gacha</li>
+                            <li><span><i class="ph ph-wind"></i> Neptun shamoli:</span> 2,100 km/s</li>
+                            <li><span><i class="ph ph-star"></i> Pulton (Mittisi):</span> 2006 yilda sayyoralar qatoridan chiqqan</li>
+                        </ul>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Deep Space Section -->
+    <section id="tubsiz-fazo" class="section deep-bg">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <h2>TUBSIZ FAZO VA FENOMENLAR</h2>
+                <div class="line mx-auto"></div>
+                <p>Quyosh tizimidan tashqaridagi aqlni shoshiruvchi kashfiyotlar.</p>
+            </div>
+
+            <div class="phenomena-list">
+                <!-- Black Hole -->
+                <div class="phenomena-item" data-aos="fade-right">
+                    <div class="phenomena-visual">
+                        <div class="black-hole-css">
+                            <div class="bh-accretion"></div>
+                            <div class="bh-center"></div>
+                        </div>
+                    </div>
+                    <div class="phenomena-content">
+                        <h3>Qora Tuynuklar (Black Holes)</h3>
+                        <p>Fazoning shunday qismiki, uning tortishish kuchidan hech narsa, hatto yorug'lik ham (sekundiga 300,000 km) qochib qutula olmaydi. Ular odatda o'ta ulkan yulduzlarning portlashi va o'z ichiga qulashi natijasida paydo bo'ladi. Uning markazida "Singulyarlik" – fizika qonunlari ishlamaydigan nuqta yotadi.</p>
+                        <div class="fact-tag"><i class="ph ph-info"></i> Somon yo'li galaktikamiz markazida Sagidarius A* nomli supermassiv qora tuynuk joylashgan.</div>
+                    </div>
+                </div>
+
+                <!-- Nebula -->
+                <div class="phenomena-item reverse" data-aos="fade-left">
+                    <div class="phenomena-visual">
+                        <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=1000&auto=format&fit=crop" alt="Nebula" class="rounded-image">
+                    </div>
+                    <div class="phenomena-content">
+                        <h3>Tumanliklar (Nebulalar)</h3>
+                        <p>Koinotdagi chang va gazdan (asosan vodorod va geliy) iborat ulkan hududlar. Ular koinotning eng go'zal manzaralarini yaratadi va kosmik "tug'uruqxona" hisoblanadi. Chunki aynan shu chang bulutlari ichida tortishish kuchi ta'sirida yangi yulduzlar va sayyoralar tug'iladi.</p>
+                        <div class="fact-tag"><i class="ph ph-info"></i> Koinotdagi eng mashhur tumanliklardan biri bu - Yaratilish Ustunlari (Pillars of Creation).</div>
+                    </div>
+                </div>
+
+                <!-- Exoplanets -->
+                <div class="phenomena-item" data-aos="fade-right">
+                    <div class="phenomena-visual">
+                        <img src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?q=80&w=1000&auto=format&fit=crop" alt="Exoplanet" class="rounded-image">
+                    </div>
+                    <div class="phenomena-content">
+                        <h3>Egzosayyora (Exoplanets)</h3>
+                        <p>Boshqa yulduzlar (Quyoshdan tashqari) atrofida aylanadigan sayyoralar. Bugungi kungacha 5,000 dan ortiq shunday sayyoralar kashf etilgan. Ularning ba'zilari "Yashash mumkin bo'lgan hudud" da joylashgan bo'lib, suyuq suv va hatto hayot bo'lish ehtimoli mavjud.</p>
+                        <div class="fact-tag"><i class="ph ph-info"></i> Kepler-452b – Yergacha bo'lgan "katta aka", taxminan Yerga o'xshash xususiyatlarga ega eng mashhur sayyoralardan.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scale & History Section -->
+    <section id="tarix" class="section">
+        <div class="container">
+            <div class="section-title text-center" data-aos="fade-up">
+                <h2>INONIYAT VA KOINOT</h2>
+                <div class="line mx-auto"></div>
+                <p>Biz qanday qilib yulduzlarga yeta oldik?</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item" data-aos="zoom-in">
+                    <div class="timeline-date">1957 yil</div>
+                    <div class="timeline-content">
+                        <h4>Sputnik 1</h4>
+                        <p>Insoniyat tarixidagi birinchi marta sun'iy yo'ldosh Yerni aylanib chiqdi. Bu kosmik eraning boshlanishi edi.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="zoom-in">
+                    <div class="timeline-date">1961 yil</div>
+                    <div class="timeline-content">
+                        <h4>Birinchi inson</h4>
+                        <p>Yuriy Gagarin Vostok-1 kemasida koinotga uchgan ilk inson bo'ldi. Sayohat 108 daqiqa davom etdi.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="zoom-in">
+                    <div class="timeline-date">1969 yil</div>
+                    <div class="timeline-content">
+                        <h4>Oyga qadam</h4>
+                        <p>Apollo 11 missiyasi. Nil Armstrong Oy yuzasiga qadam qo'ygan ilk inson bo'ldi: "Men uchun kichik qadam, insoniyat uchun ulkan sakrash".</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="zoom-in">
+                    <div class="timeline-date">1977 yil</div>
+                    <div class="timeline-content">
+                        <h4>Voyager zondlari</h4>
+                        <p>Voyager 1 va 2 kosmik kemalari uchirildi. Hozirda ular Quyosh tizimidan chiqib ketgan va insoniyat yaratgan eng uzoqdagi obyektlar sanaladi.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="zoom-in">
+                    <div class="timeline-date">2021 yil</div>
+                    <div class="timeline-content">
+                        <h4>James Webb (JWST)</h4>
+                        <p>Eng kuchli va qimmatbaho kosmik teleskop koinotga uchirildi. U orqali insoniyat "Katta Portlash" (Big Bang) dan keyingi ilk yulduzlarni ko'ra olyapti.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <i class="ph-fill ph-planet"></i> COSMOS
+                    <p>Koinot - bu cheksizlik. Biz hali hammasini o'rganmadik.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#quyosh-tizimi">Quyosh Tizimi</a>
+                    <a href="#tubsiz-fazo">Koinot Sirlari</a>
+                    <a href="#tarix">Texnologiyalar</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Koinot Entsiklopediyasi. Barcha huquqlar himoyalangan.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="ph-fill ph-youtube-logo"></i></a>
+                    <a href="#"><i class="ph-fill ph-telegram-logo"></i></a>
+                    <a href="#"><i class="ph-fill ph-twitter-logo"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Libraries -->
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
